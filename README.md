@@ -1,8 +1,9 @@
-RAG Evaluation Program
-Overview
+**RAG Evaluation Program:** 
+
 This program performs a basic Retrieval-Augmented Generation (RAG) evaluation. It uses a predefined knowledge base to retrieve answers for specific questions, generate responses based on those answers, and evaluate the correctness and quality of the generated responses using ROUGE metrics.
 
-Types of RAG Evaluation
+
+**Types of RAG Evaluation**
 Correctness:
 
 This metric checks if the generated answer matches the expected answer. A binary evaluation determines whether the response is correct.
@@ -17,24 +18,27 @@ This can be added as an extension where the relevance of the retrieved context i
 Chosen RAG Evaluation Type
 The program focuses on Correctness and ROUGE Scores.
 
-Reasoning:
+**Reasoning:**
 Correctness ensures the reliability of the answers provided by the system.
 ROUGE Scores offer a quantitative way to evaluate how well the generated responses align with the expected outputs, allowing for improvements in the generation process.
-Logger Implementation
+
+
+**Logger Implementation**
 The program uses Python’s logging library to record important evaluation results. The logging includes:
 
 Retrieved answers from the knowledge base.
 Generated answers based on the context.
 Evaluation of correctness.
 Calculation of ROUGE scores.
-Example Logging
+**Example Logging**
 python
 Copy code
 logger.info(f"Retrieved answer for '{question}': {answer}")
 logger.info(f"Generated answer: {generated_answer}")
 logger.info(f"Correctness for answer: {is_correct}")
 logger.info(f"ROUGE Scores: {scores}")
-Installation
+
+**Installation**
 To run this program, install the required packages listed in requirements.txt.
 
 Requirements.txt
@@ -42,7 +46,8 @@ Copy code
 torch
 transformers
 rouge-score
-Usage
+
+**Usage**
 Clone this repository.
 Install the required packages:
 Copy code
