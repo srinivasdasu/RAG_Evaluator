@@ -4,6 +4,21 @@ This program performs a basic Retrieval-Augmented Generation (RAG) evaluation. I
 
 ## Types of RAG Evaluation
 
+1. **Precision/Recall-based Evaluation**: 
+   - Measures how effectively the retrieval system finds relevant documents and how many relevant documents are retrieved.
+
+2. **Answer-Generation Quality**: 
+   - Focuses on the quality of the output, using metrics like ROUGE to evaluate how well the generated text matches the expected answer.
+
+3. **End-to-End Task Performance**: 
+   - Evaluates the performance of the entire system in completing a task, such as accuracy or F1 score.
+
+### Chosen Type of RAG Evaluation
+
+The chosen evaluation method for this program is **Answer-Generation Quality**. This method is crucial for assessing how accurately the generated response conveys the correct answer to a question.
+
+## Evaluation Metrics
+
 ### Correctness
 This metric checks if the generated answer matches the expected answer. A binary evaluation determines whether the response is correct.
 
@@ -15,10 +30,7 @@ This metric checks if the generated answer matches the expected answer. A binary
 ### Context Recall
 This can be added as an extension where the relevance of the retrieved context is assessed against the expected answers.
 
-## Chosen RAG Evaluation Type
-The program focuses on **Correctness** and **ROUGE Scores**.
-
-### Reasoning
+## Reasoning
 - **Correctness** ensures the reliability of the answers provided by the system.
 - **ROUGE Scores** offer a quantitative way to evaluate how well the generated responses align with the expected outputs, allowing for improvements in the generation process.
 
@@ -35,6 +47,7 @@ logger.info(f"Retrieved answer for '{question}': {answer}")
 logger.info(f"Generated answer: {generated_answer}")
 logger.info(f"Correctness for answer: {is_correct}")
 logger.info(f"ROUGE Scores: {scores}")
+
 
 
 ## Installation
