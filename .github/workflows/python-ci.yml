@@ -27,7 +27,7 @@ jobs:
         # pip install flake8 black
 
     - name: Run tests
-      run: pytest tests/
+      run: PYTHONPATH=. pytest tests/
     
     # - name: Run Linter with flake8
     #   run: |
