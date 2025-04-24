@@ -1,0 +1,32 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+
+      - name: Run tests
+        run: mvn test
+
+      - name: Check formatting with Google Java Format
+        run: |
+          sudo apt-get install google-java-format -y
+          google-java-format --dry-run --set-exit-if-changed src/**/*.java || echo "Formatting issues found"
