@@ -24,7 +24,7 @@ jobs:
         run: mvn -B package --file java-calculator-demo/pom.xml
 
       - name: Run tests
-        run: mvn test
+        run: mvn test --file java-calculator-demo/pom.xml
 
       - name: Check formatting with Google Java Format
         run: |
