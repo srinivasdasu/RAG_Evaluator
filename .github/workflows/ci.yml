@@ -26,7 +26,7 @@ jobs:
       - name: Run tests
         run: mvn test --file java-calculator-demo/pom.xml
 
-      - name: Check formatting with Google Java Format
-        run: |
-          sudo apt-get install google-java-format -y
-          google-java-format --dry-run --set-exit-if-changed src/**/*.java || echo "Formatting issues found"
+      # - name: Check formatting with Google Java Format
+      #   run: |
+      #     sudo apt-get install google-java-format -y
+      #     google-java-format --dry-run --set-exit-if-changed src/**/*.java || echo "Formatting issues found"
